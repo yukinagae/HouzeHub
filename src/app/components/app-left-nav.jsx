@@ -13,19 +13,13 @@ class AppLeftNav extends React.Component {
             <LeftNav
             ref="leftNav"
             docked={false}
-            isInitiallyOpen={false}
             menuItems={menuItems}
-            onChange={this._onLeftNavChange}
             />
         );
     }
 
     toggle() {
         this.refs.leftNav.toggle();
-    }
-
-    _onHeaderClick() {
-        this.refs.leftNav.close();
     }
 
 }
