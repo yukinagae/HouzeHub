@@ -6,7 +6,6 @@ class OneCard extends React.Component {
 
     getStyles() {
         return {
-            // margin-top: '20px',
             width: '30%',
             float: 'left',
             margin: '20px',
@@ -19,7 +18,9 @@ class OneCard extends React.Component {
           <CardMedia>
             <img src="http://lorempixel.com/600/337/nature/"/>
           </CardMedia>
-          <CardTitle title="Title" subtitle="Subtitle"/>
+          <CardTitle title="Location1" subtitle="Foo Bar St."/>
+          <CardText>$100</CardText>
+          <CardText>200 population</CardText>
           <CardActions>
             <FlatButton label="See details"/>
           </CardActions>

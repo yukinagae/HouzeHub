@@ -2,14 +2,23 @@ let React = require('react');
 let { Toolbar, ToolbarGroup, Styles, DropDownMenu, TextField, RaisedButton } = require('material-ui');
 let { Colors, Typography, Spacing } = Styles;
 
-let filterOptions = [
-    { payload: '1', text: 'All Broadcasts' },
-    { payload: '2', text: 'All Voice' },
-    { payload: '3', text: 'All Text' },
-    { payload: '4', text: 'Complete Voice' },
-    { payload: '5', text: 'Complete Text' },
-    { payload: '6', text: 'Active Voice' },
-    { payload: '7', text: 'Active Text' },
+let stateOptions= [
+    { payload: '1', text: 'New South Wales' },
+    { payload: '2', text: 'Western Australia' },
+    { payload: '3', text: 'Queensland' },
+    { payload: '4', text: 'Northern Territory' },
+    { payload: '5', text: 'South Australia' },
+    { payload: '6', text: 'Victoria' },
+    { payload: '7', text: 'Tasmania' },
+    { payload: '8', text: 'Australian Capital Territory' },
+    { payload: '9', text: 'Jervis Bay Territory' },
+];
+
+let regionOptions = [
+    { payload: '1', text: 'Sydney Region' },
+    { payload: '2', text: 'Hunter, Central & North Coasts' },
+    { payload: '3', text: 'Illawarra & South Coast' },
+    { payload: '4', text: 'Regional NSW' },
 ];
 
 class SearchBar extends React.Component {
@@ -27,13 +36,13 @@ class SearchBar extends React.Component {
         return (
           <Toolbar style={this.getStyles()}>
             <ToolbarGroup key={0} float="left">
-              <DropDownMenu menuItems={filterOptions} />
+              <DropDownMenu menuItems={stateOptions} />
             </ToolbarGroup>
             <ToolbarGroup key={1} float="left">
-              <DropDownMenu menuItems={filterOptions} />
+              <DropDownMenu menuItems={regionOptions} />
             </ToolbarGroup>
             <ToolbarGroup key={2} float="left">
-              <TextField hintText="Hint Text" />
+              <TextField hintText="Enter keyword..." />
             </ToolbarGroup>
             <ToolbarGroup key={3} float="left">
               <RaisedButton label="Search" />
