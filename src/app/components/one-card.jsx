@@ -1,5 +1,5 @@
 let React = require('react');
-let { Avatar, Card, CardHeader, CardMedia, CardTitle, CardActions, CardText, FlatButton, Styles } = require('material-ui');
+let { Avatar, Card, CardHeader, CardMedia, CardTitle, CardActions, CardText, FlatButton, Checkbox, Styles } = require('material-ui');
 let { Colors, Typography, Spacing } = Styles;
 
 class OneCard extends React.Component {
@@ -15,6 +15,7 @@ class OneCard extends React.Component {
     render() {
       return (
         <Card style={this.getStyles()}>
+        <Checkbox />
           <CardMedia>
             <img src="http://lorempixel.com/600/337/nature/"/>
           </CardMedia>
