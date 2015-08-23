@@ -38,6 +38,9 @@ class SearchBar extends React.Component {
             <ToolbarGroup key={3} float="left">
               <RaisedButton label="Search" />
             </ToolbarGroup>
+            <ToolbarGroup key={4} float="left">
+              <RaisedButton label="Compare" />
+            </ToolbarGroup>
           </Toolbar>
           );
     }

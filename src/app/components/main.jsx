@@ -3,6 +3,7 @@
 let React = require('react');
 let AppLeftNav = require('./app-left-nav');
 let SearchToolBar = require('./search-tool-bar');
+let Cards = require('./cards');
 let { AppBar, AppCanvas, Styles } = require('material-ui');
 let ThemeManager = new Styles.ThemeManager();
 
@@ -30,7 +31,7 @@ class Main extends React.Component {
         </AppBar>
 
       <AppLeftNav ref="leftNav" />
-
+      <Cards />
       </AppCanvas>
     );
   }
