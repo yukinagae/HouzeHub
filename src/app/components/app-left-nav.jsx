@@ -3,8 +3,10 @@ let { MenuItem, LeftNav, Styles } = require('material-ui');
 let { Colors, Typography, Spacing } = Styles;
 
 let menuItems = [
-    { text: 'Search'},
-    { text: 'Compare'},
+    { text: 'About Us'},
+    { text: 'How to Use?'},
+    { text: 'Contact Us'},
+    { text: 'Login'},
 ];
 
 class AppLeftNav extends React.Component {
