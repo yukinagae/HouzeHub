@@ -21,6 +21,11 @@ let regionOptions = [
     { payload: '4', text: 'Regional NSW' },
 ];
 
+let kindOptions = [
+    { payload: '1', text: 'House' },
+    { payload: '2', text: 'Land' },
+];
+
 class SearchBar extends React.Component {
 
     getStyles() {
@@ -29,6 +34,12 @@ class SearchBar extends React.Component {
             color: Typography.textFullWhite,
             fontWeight: Typography.fontWeightLight,
             backgroundColor: Colors.cyan500,
+        };
+    }
+
+    getWidthStyles() {
+        return {
+            width: '150px',
         };
     }
 
@@ -42,12 +53,15 @@ class SearchBar extends React.Component {
               <DropDownMenu menuItems={regionOptions} />
             </ToolbarGroup>
             <ToolbarGroup key={2} float="left">
-              <TextField hintText="Enter keyword..." />
+              <DropDownMenu menuItems={kindOptions} />
             </ToolbarGroup>
             <ToolbarGroup key={3} float="left">
-              <RaisedButton label="Search" />
+              <TextField hintText="Enter keyword..." style={this.getWidthStyles()} />
             </ToolbarGroup>
             <ToolbarGroup key={4} float="left">
+              <RaisedButton label="Search" />
+            </ToolbarGroup>
+            <ToolbarGroup key={5} float="left">
               <RaisedButton label="Compare" />
             </ToolbarGroup>
           </Toolbar>
